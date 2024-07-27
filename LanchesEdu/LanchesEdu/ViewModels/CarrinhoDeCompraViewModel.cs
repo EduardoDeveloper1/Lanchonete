@@ -5,6 +5,6 @@ namespace LanchesEdu.ViewModels
     public class CarrinhoDeCompraViewModel
     {
         public CarrinhoDeCompras CarrinhoDeCompras { get; set; }
-        public double CarrinhoDeCompraToal { get; set; }
+        public double CarrinhoDeCompraTotal { get; set; }
     }
 }

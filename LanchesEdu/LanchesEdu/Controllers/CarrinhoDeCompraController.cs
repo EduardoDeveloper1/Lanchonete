@@ -26,7 +26,7 @@ namespace LanchesEdu.Controllers
             var CarrinhoCompraVM = new CarrinhoDeCompraViewModel
             {
                 CarrinhoDeCompras = _carrinhoDeCompras,
-                CarrinhoDeCompraToal = _carrinhoDeCompras.GetCarrinhoCompraTotal(),
+                CarrinhoDeCompraTotal = _carrinhoDeCompras.GetCarrinhoCompraTotal(),
             };
             return View(CarrinhoCompraVM);
         }
