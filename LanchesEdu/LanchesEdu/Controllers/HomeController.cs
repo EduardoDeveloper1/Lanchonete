@@ -1,4 +1,6 @@
 using LanchesEdu.Models;
+using LanchesEdu.Repositories.Interfaces;
+using LanchesEdu.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -7,14 +9,20 @@ namespace LanchesEdu.Controllers
     public class HomeController : Controller
     {
 
-        public IActionResult Index()
+        private readonly ILancheRepository _lancheRepository;
+
+        public HomeController(ILancheRepository lancheRepository)
         {
-            return View();
+            _lancheRepository = lancheRepository;
         }
 
-        public IActionResult Demo()
+        public IActionResult Index()
         {
-            return View();
+            var homeViewModel = new HomeViewModel
+            {
+                LanchesPreferidos = _lancheRepository.LanchesPreferidos,
+            };
+            return View(homeViewModel);
         }
 
 
