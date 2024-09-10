@@ -1,4 +1,6 @@
-﻿using LanchesEdu.Repositories.Interfaces;
+﻿using LanchesEdu.Models;
+using LanchesEdu.Repositories;
+using LanchesEdu.Repositories.Interfaces;
 using LanchesEdu.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,16 +16,36 @@ namespace LanchesEdu.Controllers
             _lancheRepository = lancheRepository;
         }
 
-        public IActionResult List()
+        public IActionResult List(string categoria)
         {
-            //ViewData["Titulo"] = "Todos os Lanches";
-            //ViewData["Hora"] = DateTime.Now;
-            //var lanches = _lancheRepository.Lanches;
-            //return View(lanches);// retorna os dados dentro da view
+            IEnumerable<Lanche> lanches;
+            string categoriaAtual = string.Empty;
 
-            LancheListViewModel lancheListViewModel = new LancheListViewModel();
-            lancheListViewModel.Lanches = _lancheRepository.Lanches;
-            lancheListViewModel.CategoriaAtual = "Categoria Atual";
+            if (string.IsNullOrEmpty(categoria))
+            {
+                lanches = _lancheRepository.Lanches.OrderBy(x => x.IdLanche);
+                categoriaAtual = "Todos os Lanches";
+            }
+            else
+            {
+                if (string.Equals("Normal", categoria, StringComparison.OrdinalIgnoreCase))
+                {
+                    lanches = _lancheRepository.Lanches.Where(x => x.Categoria.NomeCategoria.Equals("Normal")).OrderBy(l => l.Nome);
+                }
+                else
+                {
+                    lanches = _lancheRepository.Lanches.Where(x => x.Categoria.NomeCategoria.Equals("Natural")).OrderBy(l => l.Nome);
+                }
+
+                categoriaAtual = categoria;
+            }
+
+            LancheListViewModel lancheListViewModel = new LancheListViewModel
+            {
+                Lanches = lanches,
+                CategoriaAtual = categoriaAtual
+            };
+
             return View(lancheListViewModel);
         }
     }

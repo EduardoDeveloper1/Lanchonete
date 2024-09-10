@@ -17,7 +17,7 @@ namespace LanchesEdu.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.6")
+                .HasAnnotation("ProductVersion", "8.0.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -34,15 +34,15 @@ namespace LanchesEdu.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
-                    b.Property<int>("Quantidade")
+                    b.Property<int?>("LancheIdLanche")
                         .HasColumnType("int");
 
-                    b.Property<int?>("lancheIdLanche")
+                    b.Property<int>("Quantidade")
                         .HasColumnType("int");
 
                     b.HasKey("CarrinhoCompraItemId");
 
-                    b.HasIndex("lancheIdLanche");
+                    b.HasIndex("LancheIdLanche");
 
                     b.ToTable("CarrinhoDeComprasItens");
                 });
@@ -125,11 +125,11 @@ namespace LanchesEdu.Migrations
 
             modelBuilder.Entity("LanchesEdu.Models.CarrinhoDeComprasItem", b =>
                 {
-                    b.HasOne("LanchesEdu.Models.Lanche", "lanche")
+                    b.HasOne("LanchesEdu.Models.Lanche", "Lanche")
                         .WithMany()
-                        .HasForeignKey("lancheIdLanche");
+                        .HasForeignKey("LancheIdLanche");
 
-                    b.Navigation("lanche");
+                    b.Navigation("Lanche");
                 });
 
             modelBuilder.Entity("LanchesEdu.Models.Lanche", b =>

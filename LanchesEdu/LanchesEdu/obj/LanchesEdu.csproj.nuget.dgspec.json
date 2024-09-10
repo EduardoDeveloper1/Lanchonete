@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Eduardo\\source\\repos\\LanchesEdu\\LanchesEdu\\LanchesEdu.csproj": {}
+    "C:\\Users\\Eduardo\\Source\\Repos\\Lanchonete\\LanchesEdu\\LanchesEdu\\LanchesEdu.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eduardo\\source\\repos\\LanchesEdu\\LanchesEdu\\LanchesEdu.csproj": {
+    "C:\\Users\\Eduardo\\Source\\Repos\\Lanchonete\\LanchesEdu\\LanchesEdu\\LanchesEdu.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eduardo\\source\\repos\\LanchesEdu\\LanchesEdu\\LanchesEdu.csproj",
+        "projectUniqueName": "C:\\Users\\Eduardo\\Source\\Repos\\Lanchonete\\LanchesEdu\\LanchesEdu\\LanchesEdu.csproj",
         "projectName": "LanchesEdu",
-        "projectPath": "C:\\Users\\Eduardo\\source\\repos\\LanchesEdu\\LanchesEdu\\LanchesEdu.csproj",
+        "projectPath": "C:\\Users\\Eduardo\\Source\\Repos\\Lanchonete\\LanchesEdu\\LanchesEdu\\LanchesEdu.csproj",
         "packagesPath": "C:\\Users\\Eduardo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eduardo\\source\\repos\\LanchesEdu\\LanchesEdu\\obj\\",
+        "outputPath": "C:\\Users\\Eduardo\\Source\\Repos\\Lanchonete\\LanchesEdu\\LanchesEdu\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\Eduardo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -50,21 +54,21 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.8, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.4, )"
             }
           },
           "imports": [
@@ -86,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
