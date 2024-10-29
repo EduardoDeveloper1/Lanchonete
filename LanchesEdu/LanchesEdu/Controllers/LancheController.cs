@@ -28,14 +28,16 @@ namespace LanchesEdu.Controllers
             }
             else
             {
-                if (string.Equals("Normal", categoria, StringComparison.OrdinalIgnoreCase))
-                {
-                    lanches = _lancheRepository.Lanches.Where(x => x.Categoria.NomeCategoria.Equals("Normal")).OrderBy(l => l.Nome);
-                }
-                else
-                {
-                    lanches = _lancheRepository.Lanches.Where(x => x.Categoria.NomeCategoria.Equals("Natural")).OrderBy(l => l.Nome);
-                }
+                //if (string.Equals("Normal", categoria, StringComparison.OrdinalIgnoreCase))
+                //{
+                //    lanches = _lancheRepository.Lanches.Where(x => x.Categoria.NomeCategoria.Equals("Normal")).OrderBy(l => l.Nome);
+                //}
+                //else
+                //{
+                //    lanches = _lancheRepository.Lanches.Where(x => x.Categoria.NomeCategoria.Equals("Natural")).OrderBy(l => l.Nome);
+                //}
+
+                lanches = _lancheRepository.Lanches.Where(x => x.Categoria.NomeCategoria.Equals(categoria)).OrderBy(n => n.Nome);
 
                 categoriaAtual = categoria;
             }
@@ -47,6 +49,12 @@ namespace LanchesEdu.Controllers
             };
 
             return View(lancheListViewModel);
+        }
+
+        public IActionResult Details(int lancheId)
+        {
+            var lanche = _lancheRepository.Lanches.FirstOrDefault(x => x.IdLanche == lancheId);
+            return View(lanche);
         }
     }
 }

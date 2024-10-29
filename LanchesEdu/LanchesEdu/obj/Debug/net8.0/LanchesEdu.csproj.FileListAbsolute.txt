@@ -504,3 +504,9 @@ C:\Users\Eduardo\Source\Repos\Lanchonete\LanchesEdu\LanchesEdu\obj\Debug\net8.0\
 C:\Users\Eduardo\Source\Repos\Lanchonete\LanchesEdu\LanchesEdu\obj\Debug\net8.0\LanchesEdu.pdb
 C:\Users\Eduardo\Source\Repos\Lanchonete\LanchesEdu\LanchesEdu\obj\Debug\net8.0\LanchesEdu.genruntimeconfig.cache
 C:\Users\Eduardo\Source\Repos\Lanchonete\LanchesEdu\LanchesEdu\obj\Debug\net8.0\ref\LanchesEdu.dll
+C:\Users\Eduardo\Source\Repos\Lanchonete\LanchesEdu\LanchesEdu\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Eduardo\Source\Repos\Lanchonete\LanchesEdu\LanchesEdu\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Eduardo\Source\Repos\Lanchonete\LanchesEdu\LanchesEdu\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Eduardo\Source\Repos\Lanchonete\LanchesEdu\LanchesEdu\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\Eduardo\Source\Repos\Lanchonete\LanchesEdu\LanchesEdu\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Eduardo\Source\Repos\Lanchonete\LanchesEdu\LanchesEdu\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
